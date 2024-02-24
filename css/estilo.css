@@ -1,0 +1,591 @@
+*{
+    margin: 0px 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #f3f3f3;
+    margin-right: 0px;
+    padding: 0%;
+}
+
+.logo{
+    height: 8.2rem;
+    width: 1px;
+    margin: 0 auto;
+    margin-top: -15px;
+    
+}
+
+h1{
+    color: white;
+    background-color: rgb(41, 133, 238);
+    padding: 20px 0 30px 5px;
+}
+
+p{
+    color:#888;
+    margin: 0 0 30px 0;
+}
+
+.container{    
+        /* width: 90%; */
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px;
+    border-radius: 5px;
+    padding: 0%;
+}
+
+.containercad{    
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+
+}
+
+.container h1{
+    text-align: center;
+    margin-right: 0%;
+
+}
+
+.container h2{
+    text-align: center;
+   }
+
+.container h1 img{
+    width: 10%;
+}
+
+.row{
+    /* margin interna da linha */
+    padding: 5px;
+}
+
+.row::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.col-1{ width: 10%; float: left;}
+.col-2{ width: 20%; float: left;}
+.col-3{ width: 30%; float: left;}
+.col-4{ width: 40%; float: left;}
+.col-5{ width: 50%; float: left;}
+.col-6{ width: 60%; float: left;}
+.col-7{ width: 70%; float: left;}
+.col-8{ width: 80%; float: left;}
+.col-9{ width: 90%; float: left;}
+.col-10{ width: 100%; float: left;}
+
+.row-flex{ 
+    display: flex; 
+    gap: 5px; 
+    margin: 15px 0; /* atualizado */
+}
+
+.row-flex2{ 
+    display: flex; 
+    gap: 5px; 
+    margin: 15px 0; /* atualizado */
+    
+}
+
+.col{
+    width: 100%;   
+     
+}
+
+/* centraliza objetos */
+.centralizar-v{
+    /* display: flex;  */
+    align-items: center;
+    margin-right: 350px;
+    margin-left: 350px;
+}
+
+.centralizar-select{
+    /* display: flex;  */
+    align-items: center;
+    margin-right: 850px;
+    margin-left: 750px;
+}
+
+.centralizar-h{
+    display: flex;
+    justify-content: center;
+}
+
+.centralizar-tabela{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.centralizar-tabela-lancamentos{
+    /* display: flex;  */
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.valor {
+    text-align: right;
+}
+
+.total-valor td {
+    font-weight: bold;
+}
+
+.centralizar-cad-lancamentos{
+   /* display: flex;  */
+    align-items: center;
+    margin-right: 750px;
+    margin-left: 650px;
+   
+}
+
+/* espaço entre objetos */
+.espaco-v{height: 5px;}
+.espaco-h{width: 5px;}
+.espaco-m{width: 110px;}
+
+.vermelho{
+    color:red;
+}
+
+.mens_erro{
+    display: none;
+    color: red;
+}
+
+.azul{
+    color: blue;
+}  
+
+.menu-strip {
+    background-color: #333; /* Cor de fundo da barra */
+    display: flex;
+}
+
+.menu-item {
+    padding: 10px 20px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado dos links */
+    transition: background-color 0.3s; /* Efeito de transição na cor de fundo */
+}
+
+.menu-item:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+.menu-principal{
+    align-items:normal;
+    font-size:larger;
+    display:block;
+    
+}
+
+.menu-principal ul li a:hover{
+    background-color: cornflowerblue;
+    text-transform: uppercase;
+}
+.menu {
+    position: relative;
+    display:block;
+}
+
+.menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    background-color: silver;
+    border: 0.5px solid #ccc;
+}
+
+.menu .submenu li {
+    background-color: silver;/* Cor de fundo para todos os itens do submenu */
+    padding: 10px;
+    border: 1px solid #2b2a2a;
+    margin: 0; /* Certifique-se de que não haja margens indesejadas nas li's do submenu */
+}
+.menu:hover .submenu {
+    display: block;
+}
+
+.menu .submenu li {
+    display: block;
+    padding: 10px;
+    margin: 0; /* Certifique-se de que não haja margens indesejadas nas li's do submenu */
+}
+
+
+/* Input file imagem e arquivos do cad lançamentos */
+    .custom-file-input {
+        display: none; /* Oculta o input real */
+    }
+
+    .custom-file-input-label {
+        cursor: pointer; /* Altera o cursor para parecer um link clicável */
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+/* Estilos para centralizar o conteúdo na janela pop-up */
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Estilo da Mensagem que aparecerá para usuário de cadastro com sucesso*/
+    #sucesso{
+    background-color: lightgreen;
+    color: rgb(0, 0, 0);
+    border: 2px solid green;
+    width: 500px;
+    height: 85px;
+    font-size: 29px;
+    border-radius: 7px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 4.3s ease;
+    position: fixed;
+    top: 10; 
+    left: 0; 
+    right: 0;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    }
+
+/*Estilo da Mensagem que aparecerá para usuário de exclusão com sucesso*/
+    #excsucesso{
+        background-color: lightgreen;
+        color: green;
+        border: 1px solid green;
+        width: 500px;
+        margin: 0 auto; 
+        margin-top: 60px;            
+        height: 85px;
+        font-size: 29px;
+        border-radius: 7px;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 4.3s ease;
+        position: fixed;
+        top: 10; 
+        left: 0; 
+        right: 0;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    
+    /*Estilo da Mensagem que aparecerá para usuário de alteração com sucesso*/
+    #altsucesso{
+        background-color: lightgreen;
+        color: green;
+        border: 1px solid green;
+        width: 500px;
+        margin: 0 auto; 
+        margin-top: 60px;            
+        height: 85px;
+        font-size: 29px;
+        border-radius: 7px;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 4.3s ease;
+        position: fixed;
+        top: 10; 
+        left: 0; 
+        right: 0;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    /*Estilo da Mensagem que aparecerá para usuário de insucesso*/
+    #altinsucesso{
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+        width: 500px;
+        margin: 0 auto; 
+        margin-top: 60px;            
+        height: 85px;
+        font-size: 29px;
+        border-radius: 7px;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 4.3s ease;
+        position: fixed;
+        top: 10; 
+        left: 0; 
+        right: 0;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+
+
+
+
+/* TABELA */
+
+.mes-expandido {
+    display: table-row;
+}
+
+
+.tabela-usuarios:hover{
+background-color: rgb(41, 133, 238);
+}
+
+table{
+    border: 1px solid rgb(18, 18, 19);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr{
+    border: 3px solid rgb(2, 2, 2);
+}
+
+th, td{
+    border: 1px solid rgb(14, 15, 15);
+    padding: 5px;
+}
+
+th{
+    background-color: rgb(41, 133, 238);
+}
+
+
+tr:hover td{
+    background-color:none;
+}
+
+/* INPUT */
+input[type=text], [type=tel], 
+[type=email], [type=password], select{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #888;
+    height: 45px;  /* atualizado */
+    font-size: 18px;  /* atualizado */
+    margin-top: 5px;  /* atualizado */
+}
+
+input[type=reset]{
+    background-color: #bbb;
+    padding: 20px 40px;
+    border: 1px solid #bbb; 
+    border-radius: 8px;   /* atualizado */ 
+    cursor: pointer;   /* atualizado */
+}
+
+input[type=submit]{
+    background-color: green;
+    color: white;
+    padding: 20px 50px;
+    border: 1px solid green;
+    border-radius: 8px;   /* atualizado */  
+    cursor: pointer;   /* atualizado */
+}
+
+input[type=file]{
+    display: none;;
+}
+
+label{
+    cursor: pointer;    
+    font-weight: bold; /* atualizado */
+    color: #777; /* atualizado */
+}
+
+.menu ul{
+    height: 51px;
+    background-color: silver;
+    display: flex;
+    justify-content: center;  /* Alinha a direita da tela */
+}
+
+.menu ul li{
+    list-style-type: none;
+    padding: 15px 25px;
+    font-weight: 800;  /*Negrito no menu*/
+    font-size: larger;
+}
+
+.menu ul li:hover{
+    background-color: rgb(141, 139, 231);
+    color: white;
+
+}
+
+
+.verde {
+    background-color: green;
+    color: white;
+  }
+
+  .vermelho {
+    background-color: red;
+    color: white;
+  }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f8f8;
+  }
+  
+  thead {
+    background-color: rgb(41, 133, 238);
+    color: #fff;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd;
+  }
+
+
+
+  
+
+.voltar {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+   .voltar > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   .voltar:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   .voltar:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+   .collapsible {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+    background-color: #ddd;
+}
+
+/*Tirar o marcador de link (Risco em baixo das Palavras*/
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* FINAL DO MENU  */
+
+/* Estilos do pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 300px;
+  }
+  
+  /* Estilos adicionais conforme necessário */
+  
+@media screen and (max-width:800px){
+
+    [class^="col-"]{width: 100%; float: left;}
+    
+    .row-flex{
+        flex-direction: column;
+    }
+
+}
+
