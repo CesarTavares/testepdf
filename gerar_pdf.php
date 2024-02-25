@@ -4,14 +4,22 @@
 // see: http://getcomposer.org/doc/00-intro.md
 require './vendor/autoload.php';
 
+//Receber da URL o termo usado para pesquisar
+$texto_pesquisar = filter_input(INPUT_GET, 'texto_pesquisar', FILTER_DEFAULT);
+$nome = "%" . $texto_pesquisar . "%";
 // incluir conexao com BD
 include_once './conexao.php';
 
 //Query para recuperar os registros do banco de dados
-$query_usuarios = "SELECT id, nome, email FROM usuarios";
+$query_usuarios = "SELECT id, nome, email 
+                   FROM usuarios    
+                   WHERE nome LIKE :nome 
+                   ORDER BY id DESC";
 
 //Preparar a QUERY
 $result_usuarios = $conn->prepare($query_usuarios);
+
+$result_usuarios->bindParam(':nome', $nome);
 
 //EXECUTAR A QUERY
 $result_usuarios->execute();
@@ -36,11 +44,8 @@ while($row_usuario = $result_usuarios->fetch(PDO::FETCH_ASSOC)){
     $dados .= "E-MAIL: $email <br>";
     $dados .= "<hr>";
 }
-
-// $dados .= "<img src='http://localhost/testepdf/imagens/logo_minha_carteira1.png' <br>";
-// $dados .= "O PHP proin aidfajk jkçld asdfm nhbujb bf.r nuf nag;.a;n;kfnbn.nm,nalagjklglueqwuglkgaak uj.gjj
-// nsfgnss,bsg.sgss,fgshgb bjjbf jb jb vb ljfdgçsj jb.jbb jb";
 $dados .= "</body>";
+$dados .= "</html>";
 
 //reference the Dompdf namespace
 use Dompdf\Dompdf;
